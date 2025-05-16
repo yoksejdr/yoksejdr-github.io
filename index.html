@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Aquí van los links -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Feliz Cumpleaños!!!</h1>
+    <h2>A la chica más guapa, lista y talentosa del mundo</h2>
+    <p>Espero verte pronto. Te quiero mucho.</p>
+    <img src="{{ url_for('static', filename='fotoCasados.jpg') }}" alt="Foto 1" class="foto-fija foto1">
+    <img src="{{ url_for('static', filename='fotoCubata.jpg') }}" alt="Foto 2" class="foto-fija foto2">
+    <img src="{{ url_for('static', filename='fotoHeli1.jpg') }}" alt="Foto 3" class="foto-fija foto3">
+
+
+</body>
+</html>
