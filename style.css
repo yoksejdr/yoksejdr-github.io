@@ -4,15 +4,14 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-x: hidden;
+    /* IMPORTANTE: dejamos que el body crezca en altura */
+    position: relative;
 }
 
-/* Fondo con imagen, usando ::before */
+/* Fondo con imagen */
 body::before {
     content: "";
     position: fixed;
@@ -39,7 +38,6 @@ body::before {
     }
 }
 
-/* Estilos individuales con animación */
 h1, h2, p {
     opacity: 0;
     animation: fadeIn 1s ease-out forwards;
@@ -49,49 +47,93 @@ h1, h2, p {
 
 h1 {
     font-size: 4.7em;
-    top: 50px;
+    margin-top: 100px;     /* MÁS ALTO */
     animation-delay: 0.3s;
 }
 
 h2 {
     font-size: 2em;
     font-weight: normal;
+    margin-top: 100px;     /* MÁS ALTO */
     animation-delay: 1.5s;
-    margin-top: 40px; /* Añadido para separarlo del h1 */
 }
 
 p {
     font-size: 1.5em;
-    margin-top: 30px; /* Aumentado para bajarlo más */
+    margin-top: 100px;     /* MÁS ALTO */
     animation-delay: 2.8s;
 }
 
-/* Fotos fijas con animación */
-.foto-fija {
-    position: fixed;
-    height: auto;
-    z-index: 10;
+.imagenes {
+    display: flex;
+    flex-direction: row;         /* Horizontal */
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;             /* Se adapta en móvil */
+    gap: 60px;                   /* Separación entre imágenes */
+    margin-top: 100px;
+}
+
+.imagenes {
+    display: flex;
+    justify-content: center;   /* Asegura centrado horizontal */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-top: 100px;
+    width: 100%;               /* Asegura que no colapse */
+}
+
+
+.foto {
     opacity: 0;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
     animation: fadeIn 1s ease-out forwards;
+    transition: transform 0.3s ease;
 }
 
-.foto1 {
-    width: 400px;
-    top: 300px;
-    left: 458px;
-    animation-delay: 3.5s;
+.Foto1 {
+    max-width: 500px;
+    width: 90%;
+    animation-delay: 4s;
+    order: 3;              /* Centramos moviéndola al centro en orden */
+    align-self: center;    /* Centrada verticalmente si hace falta */
+
+
 }
-.foto3 {
-    width: 275px;
-    top: 235px;
-    left: 75px;
-    animation-delay: 4.5s;
-}
-.foto2 {
-    width: 250px;
-    top: 175x;
-    left: 975px;
+
+.Foto2 {
+    max-width: 275px;
+    width: 80%;
     animation-delay: 5s;
-}
+    order: 2;              /* La forzamos a la derecha antes de la principal */
 
+
+}
+.Foto3 {
+    max-width: 275px;
+    width: 80%;
+    animation-delay: 6s;
+    order: 1;              /* La forzamos a la derecha antes de la principal */
+
+
+}
+.Foto4 {
+    max-width: 275px;
+    width: 80%;
+    animation-delay: 7s;
+    order: 4;              /* La forzamos a la derecha antes de la principal */
+
+
+}
+.Foto5 {
+    max-width: 275px;
+    width: 80%;
+    animation-delay: 8s;
+    order: 5;              /* La forzamos a la derecha antes de la principal */
+
+
+}
 
