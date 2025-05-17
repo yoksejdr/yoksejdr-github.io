@@ -11,10 +11,20 @@
     <h1>Feliz Cumpleaños!!!</h1>
     <h2>A la chica más guapa, lista y talentosa del mundo</h2>
     <p>Espero verte pronto. Te quiero mucho.</p>
-    <img src="{{ url_for('static', filename='fotoCasados.jpg') }}" alt="Foto 1" class="foto-fija foto1">
-    <img src="{{ url_for('static', filename='fotoCubata.jpg') }}" alt="Foto 2" class="foto-fija foto2">
-    <img src="{{ url_for('static', filename='fotoHeli1.jpg') }}" alt="Foto 3" class="foto-fija foto3">
+
+<div class="imagenes">
+    <img src="{{ url_for('static', filename='fotoCasados.jpg') }}" class="Foto1 foto">
+    <img src="{{ url_for('static', filename='fotoHeli1.jpg') }}" class="Foto2 foto">
+    <img src="{{ url_for('static', filename='fotoCasa.jpg') }}" class="Foto3 foto">
+    <img src="{{ url_for('static', filename='fotoGato.jpg') }}" class="Foto4 foto">
+    <img src="{{ url_for('static', filename='fotoSkincare.jpg') }}" class="Foto5 foto">
+
+</div>
+
+
+
 
 
 </body>
+
 </html>
